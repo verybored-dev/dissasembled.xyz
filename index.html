@@ -1,2 +1,172 @@
-<h1>Disassembled fan page (coming soon)</h1> </br>
-and yes its spelled wrong
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disassembled - Fan Page</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .profile-section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem auto;
+            width: 100%;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 2;
+        }
+
+        .quote-bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 20px;
+            left: calc(100% + 20px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            text-align: left;
+            font-style: italic;
+            line-height: 1.6;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote-bubble::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 15px;
+            border-style: solid;
+            border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 1rem 0;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .about {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .discord-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #7289da, #5865f2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 16px rgba(114, 137, 218, 0.3);
+        }
+
+        .discord-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(114, 137, 218, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .about {
+                font-size: 1.1rem;
+                padding: 1.5rem;
+            }
+            .quote-bubble {
+                position: relative;
+                left: auto;
+                top: auto;
+                transform: none;
+                margin: 1rem auto 0;
+            }
+            .quote-bubble::before {
+                left: 50%;
+                top: -15px;
+                transform: translateX(-50%) rotate(-90deg);
+            }
+            .profile-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-wrapper">
+                <img src="pfp.png" alt="Disassembled" class="profile-image">
+                <div class="quote-bubble">
+                    "To look into the stars is to see what is, how it was, and what it will be."
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Disassembled</h1>
+            <div class="about">
+                <p>The admin who everyone fears. The mere mention of his name sends shivers down the spine of newcomers! He acts reasonably, even though it doesn't look like it to many users. </p>
+            </div>
+            <a href="https://discord.gg/program" class="discord-link" target="_blank">Join the Discord Server</a>
+        </div>
+    </div>
+</body>
+</html>
